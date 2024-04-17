@@ -1,10 +1,9 @@
 from django.db import models
 
-class patient(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    age = models.IntegerField()
-    gender = models.CharField(max_length=10, choices=[('M', 'Male'), ('F', 'female')])
-    date_of_birth = models.DateField()
+class client(models.Model):
+    username = models.CharField(max_length=100)
+    email = models.EmailField()
+    password = models.CharField(max_length=100)
+    confirm_password = models.CharField(max_length=100)
 
 # Create your models here.
